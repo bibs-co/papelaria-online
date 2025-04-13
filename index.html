@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soft Paper</title>
 
+    <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
+
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="CSS/style.css">
 
@@ -26,22 +28,49 @@
                     <li><a href="#menu" class="nav-link active-navlink">menu</a></li>
                     <li><a href="#clientes" class="nav-link active-navlink">clientes</a></li>
                 </ul>
+                <div class="media-icons flex">
+                    <a href="wa.me" target="_blank"><i class='bx bxl-whatsapp'></i></a>
+                    <a href="instagram.com" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
+                </div>
+                <i class='bx bx-x navclose-btn'></i>
+                <a href="#cart"><i class='bx bxs-cart cartnav'></i></a>
             </div>
-
-            <div class="contact-content flex">
-                <a href="#">
+            
+            <div class="cart-content flex">
+                <a href="#cart">
                     <i class='bx bxs-cart cart-icon' ></i>
                     <span class="cart">carrinho</span>
                 </a>
             </div>
+            <i class='bx bx-menu-alt-right navopen-btn'></i>
         </nav>
 
     </header>
     <main>
-        <section class="section home" id="home">
-
+        <section class="home" id="home">
+                <div class="home-content">
+                    <div class="swiper myswiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="img/img1.png" alt="" class="homeimg">
+                                <div class="home-details">
+                                    <div class="home-text">
+                                        <h4 class="homesub">a sua personalidade em folhas</h4>
+                                        <h2 class="tometitle">qualidade e beleza</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-button-next swiper-navbtn"></div>
+                        <div class="swiper-button-prev swiper-navbtn"></div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
         </section>
     </main>
-    
+
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+
 </body>
 </html>
