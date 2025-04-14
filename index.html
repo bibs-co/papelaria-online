@@ -7,37 +7,35 @@
     <title>Soft Paper</title>
 
     <link rel="stylesheet" href="CSS/swiper-bundle.min.css">
-
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="CSS/style.css">
 
 
 </head>
-<body>
+<body class="bodyindex">
     <header class="header" >
         <nav class="nav container flex">
             <a href="#" class="logo-content flex">
                 <i class='bx bxs-book-alt logo-icon'></i>
-                <span class="logo-text">papelaria.</span>
+                <span class="logo-text">soft paper.</span>
             </a>
 
             <div class="menu-content">
                 <ul class="menu-list flex">
-                    <li><a href="#inicio" class="nav-link active-navlink">início</a></li>
-                    <li><a href="#sobre" class="nav-link active-navlink" >sobre nós</a></li>
-                    <li><a href="#menu" class="nav-link active-navlink">menu</a></li>
-                    <li><a href="#clientes" class="nav-link active-navlink">clientes</a></li>
+                    <li><a href="#home" class="nav-link active-navlink">início</a></li>
+                    <li><a href="html/produtos.html" class="nav-link active-navlink">comprar</a></li>
+                    <li><a href="#sobre" class="nav-link active-navlink" >sobre</a></li>
                 </ul>
                 <div class="media-icons flex">
                     <a href="wa.me" target="_blank"><i class='bx bxl-whatsapp'></i></a>
                     <a href="instagram.com" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
                 </div>
                 <i class='bx bx-x navclose-btn'></i>
-                <a href="#cart"><i class='bx bxs-cart cartnav'></i></a>
+                <a href="html/carrinho.html"><i class='bx bxs-cart cartnav'></i></a>
             </div>
             
             <div class="cart-content flex">
-                <a href="#cart">
+                <a href="html/carrinho.html">
                     <i class='bx bxs-cart cart-icon' ></i>
                     <span class="cart">carrinho</span>
                 </a>
@@ -49,15 +47,36 @@
     <main>
         <section class="home" id="home">
                 <div class="home-content">
-                    <div class="swiper myswiper">
+                    <div class="swiper mySwiper">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide">
                                 <img src="img/img1.png" alt="" class="homeimg">
                                 <div class="home-details">
                                     <div class="home-text">
                                         <h4 class="homesub">a sua personalidade em folhas</h4>
-                                        <h2 class="tometitle">qualidade e beleza</h2>
+                                        <h2 class="hometitle">qualidade e beleza</h2>
                                     </div>
+                                    <button class="btn"><a href="html/produtos.html">Produtos</a></button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img2.png" alt="" class="homeimg">
+                                <div class="home-details">
+                                    <div class="home-text">
+                                        <h4 class="homesub">a sua personalidade em folhas</h4>
+                                        <h2 class="hometitle">qualidade e beleza</h2>
+                                    </div>
+                                    <button class="btn"><a href="html/produtos.html">Produtos</a></button>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="img/img3.png" alt="" class="homeimg">
+                                <div class="home-details">
+                                    <div class="home-text">
+                                        <h4 class="homesub">a sua personalidade em folhas</h4>
+                                        <h2 class="hometitle">qualidade e beleza</h2>
+                                    </div>
+                                    <button class="btn"><a href="html/produtos.html">Produtos</a></button>
                                 </div>
                             </div>
                         </div>
@@ -67,10 +86,36 @@
                     </div>
                 </div>
         </section>
+        <section class="section about" id="sobre">
+            <div class="about-content container">
+                <div class="about-imagecontent">
+                    <img src="img/sobre.jpg" alt="" class="about-img">
+                    <div class="aboutimg-textbox">
+                        <i class='bx bxs-heart-circle hearticon flex'></i>
+                        <p class="content-description">Produtos maravilhosos, não dá pra escolher só um!</p>
+                    </div>
+                </div>
+                <div class="about-details">
+                    <div class="about-text">
+                        <h4 class="content-subs">Nossa loja</h4>
+                        <h2 class="content-title">Papelaria Alternativa</h2>
+                        <p class="content-description">com a missão de levar produtos <b>personalizados</b> pra quem tem a <b>personalidade</b> forte.</p>
+                        <ul class="about-lists flex">
+                            <li class="about-list">Cadernos</li>
+                            <li class="about-list dot">.</li>
+                            <li class="about-list">Planners</li>
+                            <li class="about-list dot">.</li>
+                            <li class="about-list">Agendas</li>
+                        </ul>
+                    </div>                
+                </div>
+            </div>
+        </section>
     </main>
 
     <script src="js/swiper-bundle.min.js"></script>
-    <script src="js/script.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/swiper.js"></script>
 
 </body>
 </html>
