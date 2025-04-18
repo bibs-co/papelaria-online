@@ -47,10 +47,36 @@
         </nav>
 
     </header>
+    <main class="main-cadastro">
+            <div class="cadastrocard flex">
+                <h2>Crie sua conta!</h2>
+                <form action="#" method="post" class="cadastro-form">
+                    <label>Nome completo:</label>
+                    <input type="text" class="input-normal" required>
+                    <label>Email:</label>
+                    <input type="email" class="input-normal" required>
+                    <label>Senha:</label>
+                    <input type="password" class="input-normal" required>
+                    <label>Repita sua senha:</label>
+                    <input type="password" class="input-normal" required>
+                    <div class="forminput" style="display: flex; gap: 1rem; width: 100%;">
+                        <div class="formcoluna" style="flex: 1;">
+                            <label>Rua:</label><br>
+                            <input type="text" class="input-medio" required>
+                        </div>
+                        <div class="formcoluna" style="flex: 2;">
+                            <label>Número:</label><br>
+                            <input type="number" class="input-pequeno" required>
+                        </div>
+                    </div>
+                    <label>CEP:</label>
+                    <input type="number" class="input-normal" required>
+                    <button class="form">Cadastrar</button>
+                </form>
+                <h4>Já uma conta? <a href="login.html" style="text-decoration: underline;">Faça o login.</a></h4>
 
-
-
-
+            </div>
+        </main>
 
     <script src="../js/menu.js"></script>
 
