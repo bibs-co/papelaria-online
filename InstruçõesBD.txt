@@ -1,8 +1,8 @@
-create database soft-paper;
+create database softpaper;
 
-use soft-paper;
+use softpaper;
 
-CREATE TABLE tabela (
+CREATE TABLE usuarios (
     id INT(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     email VARCHAR(100) NOT NULL,
