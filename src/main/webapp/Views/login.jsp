@@ -15,20 +15,20 @@
 <body class="bodyp">
     <header class="header">
         <nav class="nav container flex">
-            <a href="${pageContext.request.contextPath}/index.html#home" class="logo-content flex">
+            <a href="${pageContext.request.contextPath}/index.jsp#home" class="logo-content flex">
                 <i class='bx bxs-book-alt logo-icon'></i>
                 <span class="logo-text">soft paper.</span>
             </a>
             <div class="menu-content">
                 <ul class="menu-list flex">
                     <li>
-                        <a href="${pageContext.request.contextPath}/index.html#home" class="nav-link active-navlink">início</a>
+                        <a href="${pageContext.request.contextPath}/index.jsp#home" class="nav-link active-navlink">início</a>
                     </li>
                     <li>
                         <a href="${pageContext.request.contextPath}/Views/produtos.jsp" class="nav-link active-navlink">comprar</a>
                     </li>
                     <li>
-                        <a href="${pageContext.request.contextPath}/index.html#sobre" class="nav-link active-navlink">sobre</a>
+                        <a href="${pageContext.request.contextPath}/index.jsp#sobre" class="nav-link active-navlink">sobre</a>
                     </li>
                     <li class="login-header">
                         <a href="${pageContext.request.contextPath}/Views/login.jsp" class="nav-link active-navlink">login</a>
