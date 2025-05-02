@@ -1,5 +1,10 @@
 package dao;
 
+/**
+ *
+ * @author bianca, pedroGabriel, pedroOliveira, pedroRodrigues
+ */
+
 import Models.Login;
 import java.sql.*;
 

@@ -23,7 +23,8 @@ html{
 
 /** cores */
 --primary-color: #701414;
---primary-color-hover: #690000;
+--primary-color-hover: #460000;
+--primary-color-light: rgba(118, 0, 0, 0.053);
 --text-color: #333;
 --text-color-light: #888682;
 --border-color: #484848;
@@ -74,6 +75,12 @@ input{
 body{
     background-color: var(--white-color);
     overflow-x: hidden;
+}
+.bodyc{
+    margin-top: 7rem;
+}
+.bodyl{
+    margin-top: 4rem;
 }
 ul{
     list-style: none;
@@ -147,8 +154,9 @@ img{
     z-index: var(--z-fixed);
     padding: 2rem 0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: var(--tran-05) ease;
 }
-.bodyp .header, .bodyc .header, .bodyl .header{
+.bodyc .header, .bodyl .header{
     background-color: var(--primary-color);
 }
 
@@ -159,7 +167,7 @@ img{
     justify-content: space-between;    
 }
 
-.logo-icon, .logo-text,  .nav-link, .cart-icon, .cart{
+.logo-icon, .logo-text,  .nav-link, .cart-icon{
     color: var(--white-color);    
 }
 .cart-content{
@@ -356,14 +364,15 @@ img{
     font-weight: var(--font-bold);
     color: white;
 }
-
+.about{
+    background-color: var(--primary-color-light);
+}
 .about-content{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     column-gap: 7rem;
     align-items: center;
     padding: 0 5rem;
-
 }
 .about-icon{
     padding-top: 2rem;
@@ -430,7 +439,6 @@ img{
     background-position: center;
     background-repeat: no-repeat;
     overflow-y: auto;
-    margin-top: 4rem;
 }
 .logincard {
     width: 400px;
@@ -478,7 +486,7 @@ img{
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-.main-cadastro{
+.main-cadastro {
     height: 100vh;
     width: 100vw;
     align-items: center;
@@ -490,13 +498,28 @@ img{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    overflow-y: auto;
-    margin-top: 4rem;
+    overflow-y: hidden; 
 }
+
+.main-compra {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    gap: 2rem;
+    background-color: rgb(95, 94, 94);
+    background-image: url('../img/img4.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-y: hidden;  
+}
+
 .cadastrocard {
-    width: 400px;
-    height: 800px;
-    padding: 2rem;
+    width: 90%;
+    max-width: 350px;
+    padding: 1.5rem;
     border-radius: 60px;
     border: 2px solid var(--white-color);
     background-color: var(--primary-color);
@@ -505,93 +528,339 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     margin: auto;
+    margin-top: 6rem; 
 }
-.cadastrocard h4, .cadastrocard h2, .cadastrocard a, .cadastrocard label{
+
+.cadastrocard h4, .cadastrocard h2, .cadastrocard a, .cadastrocard label {
     color: var(--white-color);
-    width: 30rem;
+    width: 90%;
+    max-width: 30rem;
 }
-.cadastrocard h4{
+
+.cadastrocard h4 {
     font-weight: var(--normal-font);
 }
-.cadastrocard .input-normal{
-    width: 30rem;
-    padding: 7px;
-    margin: 5px 0;
+
+.cadastrocard .input-normal,
+.cadastrocard .input-medio,
+.cadastrocard .input-pequeno {
+    width: 100%;
+    padding: 5px;
+    margin: 3px 0;
     border: 1px solid var(--white-color);
     border-radius: 5px;
 }
-.cadastrocard .input-medio{
-    width: 20rem;
-    padding: 7px;
-    margin: 5px 0;
-    border: 1px solid var(--white-color);
-    border-radius: 5px;
-}
-.cadastrocard .input-pequeno{
-    width: 9rem;
-    padding: 7px;
-    margin: 5px 0;
-    border: 1px solid var(--white-color);
-    border-radius: 5px;
-}
-.cadastro-form{
+
+.cadastro-form {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 0.5rem;
     align-items: center;
+    width: 80%;
+    max-width: 350px;
 }
-.cadastro-form button{
-    padding: 10px;
+
+.cadastro-form button {
+    padding: 8px;
+    width: 80%;
+    border-radius: 5px;
     background: var(--white-color);
     border: none;
     color: var(--text-color);
-    border-radius: 5px;
     cursor: pointer;
 }
-.cadastro-form button:hover{
+
+.cadastro-form button:hover {
     background-color: rgba(255, 255, 255, 0.3);
 }
 
-/* --- Início do CSS para Popup (Modal) --- */
-.popup-overlay {
-    display: none; /* Oculto por padrão */
+/* Ajustes para telas menores */
+@media (max-width: 600px) {
+    .cadastro-form {
+        width: 90%;
+        max-width: 300px;
+    }
+
+    .cadastrocard {
+        max-width: 300px;
+        padding: 1rem;
+        margin-top: 4rem; 
+    }
+}
+
+.product1{
+    text-align: center;
+    padding: 40px 80px;
+    padding-top: 9rem;
+    margin-bottom: 4rem;
+}
+.product1 .pro-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.product1 .pro{
+    width: 25%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+    margin: 15px 0;
+    transition: var(--tran-02) ease;
+    position: relative;
+}
+.product1 .pro:hover{
+    box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.15);
+    background-color: var(--primary-color-light);
+    color: var(--white-color);
+}
+.product1 .pro img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+.product1 .pro .des span{
+    color: var(--text-color-light);
+    font-size: var(--small-font);
+}
+.product1 .pro .des h5{
+    padding-top: 7px;
+    color: var(--text-color);
+    font-size: var(--normal-font);    
+}
+.product1 .pro .des i{
+    font-size: var(--small-font);
+    color: rgb(217, 199, 67);
+    font-weight: var(--font-bold);
+}
+.product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: var(--h2-font);
+    font-weight: var(--font-bold);
+    color: var(--text-color);
+}
+.product1 .pro .pro-cart{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background-color: var(--primary-color-light);
+    font-weight: var(--font-medium);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    font-size: 30px;
+}
+.cart {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: var(--z-fixed); /* Usa a variável já existente ou defina um valor como 1000 */
-  }
-  
-  .popup-content {
+    right: -100%;
+    width: 350px;
+    height: 100vh;
     background-color: var(--white-color);
-    width: 300px;
-    margin: 15% auto; /* Centralizado verticalmente com margem superior */
-    padding: 2rem;
-    border-radius: 5px;
-    text-align: center;
-    position: relative;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  }
-  
-  .popup-close {
-    position: absolute;
-    top: 0.5rem;
-    right: 1rem;
-    font-size: 2rem;
-    cursor: pointer;
-    color: var(--primary-color);
-  }
-  /* --- Fim do CSS para Popup --- */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transition: right 0.5s ease;
+    padding: 20px;
+    z-index: 1000;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
 
-  /* CSS daquela dica da senhaa*/
+.cart.open {
+    right: 0;
+}
+
+.cart h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 1rem;
+}
+
+#cart-items {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+#cart-items li {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#cart-items li span {
+    font-size: var(--normal-font);
+}
+
+.close-cart{
+    top: 2rem;
+    right: 2rem;
+    font-size: 3.2rem;
+    cursor: pointer;
+    position: absolute;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-item-image {
+    width: 90px;
+    height: 110px;
+    object-fit: cover;
+}
+
+.cart-item-details {
+    flex: 1;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.cart-item-details h4 {
+    font-size: var(--normal-font);
+}
+.cart-item-details h6 {
+    font-size: var(--x-small-font);
+    color: var(--text-color-light);
+    font-weight: var(--font-regular);
+    margin-bottom: -1rem;
+}
+
+.cart-item-details p {
+    font-size: var(--normal-font);
+    color: var(--text-color-light);
+}
+
+.cart-item-quantity {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.quantity-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: var(--small-font);
+    width: 2rem;
+    height: 2rem;
+}
+
+.quantity-btn:hover {
+    background-color: var(--primary-color-hover);
+}
+
+.remove-item {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: none;
+    font-size: var(--h3-font);
+    cursor: pointer;
+}
+
+.cart-footer {
+    text-align: center;
+    font-size: var(--h3-font);
+    font-weight: var(--font-bold);
+    padding: 2rem 0;
+    border-top: 1px solid var(--border-color);
+    background-color: var(--white-color);
+    display: flex;
+    gap: 3rem;
+    margin: auto;
+}
+.cart-footer a{
+    width: 80px;
+    height: 40px;
+    line-height: 3.7rem;
+    border-radius: 10px;
+    background-color: var(--primary-color-light);
+    font-weight: var(--font-medium);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    font-size: var(--normal-font);
+    margin-top: -0.5rem;
+}
+
 #passwordCriteria {
     display: none;      
     font-size: 0.9em;    
     margin-bottom: 10px;
 }
 
+.compracard {
+    width: 700px;  
+    height: 400px;      
+    padding: 2rem;
+    border-radius: 60px;
+    border: 2px solid var(--primary-color); 
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    margin: auto;
+  }
+      
+  .compracard h1 {
+    color: var(--primary-color);
+    font-size: 3rem; 
+    margin: 0;
+  }
+      
+  .compracard p {
+    color: var(--primary-color);
+    font-size: 1.2rem;  
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+  }
+      
+  .compra-btn {
+    border: none;
+    outline: none;
+    color: #ffffff; 
+    padding: 0.8rem 0.8rem;
+    border-radius: 3rem;
+    background-color: var(--primary-color);
+    transition: var(--tran-03);
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .compra-btn a {
+    color: inherit;
+    text-decoration: none;  
+    display: inline-block;
+  }
+    
+  .compra-btn:hover {
+    background-color: var(--primary-color-hover);
+  }
+  
   

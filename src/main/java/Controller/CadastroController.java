@@ -1,5 +1,10 @@
 package Controller;
 
+/**
+ *
+ * @author bianca, pedroGabriel, pedroOliveira, pedroRodrigues
+ */
+
 import Models.Login;
 import dao.UsuarioDAO;
 import javax.servlet.ServletException;

@@ -21,18 +21,9 @@
             </a>
             <div class="menu-content">
                 <ul class="menu-list flex">
-                    <li>
-                        <a href="${pageContext.request.contextPath}/index.jsp#home" class="nav-link active-navlink">início</a>
-                    </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/Views/produtos.jsp" class="nav-link active-navlink">comprar</a>
-                    </li>
-                    <li>
-                        <a href="${pageContext.request.contextPath}/index.jsp#sobre" class="nav-link active-navlink">sobre</a>
-                    </li>
-                    <li class="login-header">
-                        <a href="${pageContext.request.contextPath}/Views/login.jsp" class="nav-link active-navlink">login</a>
-                    </li>
+                    <li><a href="../index.jsp#home" class="nav-link active-navlink">início</a></li>
+                    <li><a href="../index.jsp#produtos" class="nav-link active-navlink">comprar</a></li>
+                    <li><a href="../index.jsp#sobre" class="nav-link active-navlink" >sobre</a></li>
                 </ul>
                 <div class="media-icons flex">
                     <a href="https://wa.me" target="_blank">
@@ -43,14 +34,9 @@
                     </a>
                 </div>
                 <i class='bx bx-x navclose-btn'></i>
-                <a href="${pageContext.request.contextPath}/Views/carrinho.jsp">
-                    <i class='bx bxs-cart cartnav'></i>
-                </a>
+
             </div>
             <div class="cart-content flex">
-                <a href="${pageContext.request.contextPath}/Views/carrinho.jsp">
-                    <i class='bx bxs-cart cart-icon'></i>
-                </a>
                 <a href="${pageContext.request.contextPath}/Views/login.jsp" class="nav-link">Login</a>
             </div>
             <i class='bx bx-menu-alt-right navopen-btn'></i>

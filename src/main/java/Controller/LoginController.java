@@ -1,4 +1,13 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package Controller;
+
+/**
+ *
+ * @author bianca, pedroGabriel, pedroOliveira, pedroRodrigues
+ */
 
 import Models.Login;
 import dao.UsuarioDAO;
@@ -19,6 +28,7 @@ public class LoginController extends HttpServlet {
         System.out.println("Tentativa de login - Email: " + email + " | Senha: " + senha);
 
         try {
+            // Criptografa o email e gera o hash da senha
             String encryptedEmail = CadastroController.EncryptionUtil.encrypt(email);
             String hashedSenha = CadastroController.EncryptionUtil.hashSHA256(senha);
 
@@ -27,9 +37,17 @@ public class LoginController extends HttpServlet {
 
             if (usuario != null) {
                 System.out.println("Login válido. Usuário: " + usuario.getNome());
+                // Descriptografa o e-mail para exibição em formato legível
+                try {
+                    String decryptedEmail = CadastroController.EncryptionUtil.decrypt(usuario.getEmail());
+                    usuario.setEmail(decryptedEmail);
+                } catch (Exception ex) {
+                    ex.printStackTrace();
+                    // Opcional: definir um valor padrão ou tentar outra ação se a descriptografia falhar
+                }
                 HttpSession session = request.getSession();
                 session.setAttribute("usuario", usuario);
-                response.sendRedirect(request.getContextPath() + "/Views/produtos.jsp");
+                response.sendRedirect(request.getContextPath() + "/index.jsp#produtos");
             } else {
                 System.out.println("Login inválido - Email ou senha incorretos.");
                 request.setAttribute("erro", "Email ou senha incorretos.");

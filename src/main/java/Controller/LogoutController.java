@@ -1,5 +1,10 @@
 package Controller;
 
+/**
+ *
+ * @author bianca, pedroGabriel, pedroOliveira, pedroRodrigues
+ */
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -15,6 +20,6 @@ public class LogoutController extends HttpServlet {
         if (session != null) {
             session.invalidate();
         }
-        response.sendRedirect(request.getContextPath() + "/Views/login.jsp");
+        response.sendRedirect(request.getContextPath() + "/index.jsp");
     }
 }

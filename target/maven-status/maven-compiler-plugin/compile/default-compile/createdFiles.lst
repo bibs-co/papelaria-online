@@ -1,10 +1,6 @@
-Models\Carrinho.class
 com\mycompany\papelariaonline\resources\JakartaEE8Resource.class
 dao\UsuarioDAO.class
-Models\Produtos.class
 Controller\LoginController.class
 Models\Login.class
-Models\ItemCarrinho.class
 com\mycompany\papelariaonline\JakartaRestConfiguration.class
 Controller\CadastroController.class
-Models\Pedido.class

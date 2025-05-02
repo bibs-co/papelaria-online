@@ -1,4 +1,3 @@
-
 //menu nav
 const body = document.querySelector('body'),
     navMenu = body.querySelector('.menu-content'),
@@ -19,3 +18,18 @@ if(navMenu && navclosebtn){
     });
     
 }
+
+//header
+const header = document.querySelector('.header');
+const produtos = document.querySelector('#produtos');
+
+window.addEventListener('scroll', () => {
+  const produtosTop = produtos.offsetTop;
+  if (window.scrollY >= produtosTop) {
+    header.style.backgroundColor = 'var(--primary-color)';
+  } else {
+    header.style.backgroundColor = 'transparent';
+  }
+});
+
+
