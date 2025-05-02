@@ -110,11 +110,9 @@ public class CadastroController extends HttpServlet {
             return hexString.toString();
         }
         
-        // Dados para criptografia AES
         private static final String ALGORITHM = "AES";
         private static final byte[] keyValue = new byte[] { 'S','e','c','r','e','t','K','e','y','1','2','3','4','5','6','7' };
         
-        // Método para criptografar uma string utilizando AES
         public static String encrypt(String valueToEnc) throws Exception {
             Key key = generateKey();
             Cipher c = Cipher.getInstance(ALGORITHM);
@@ -123,7 +121,6 @@ public class CadastroController extends HttpServlet {
             return Base64.getEncoder().encodeToString(encValue);
         }
         
-        // Método para descriptografar (caso necessário)
         public static String decrypt(String encryptedValue) throws Exception {
             Key key = generateKey();
             Cipher c = Cipher.getInstance(ALGORITHM);
