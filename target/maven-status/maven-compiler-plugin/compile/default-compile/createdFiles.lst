@@ -1,4 +1,5 @@
 com\mycompany\papelariaonline\resources\JakartaEE8Resource.class
+papelariaonline\Java.class
 dao\UsuarioDAO.class
 Controller\LoginController.class
 Models\Login.class
