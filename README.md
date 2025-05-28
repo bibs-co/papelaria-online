@@ -1,4 +1,4 @@
-📄 **SoftPaper**
+##📄 **SoftPaper**
 
 Projeto desenvolvido como requisito para a conclusão do 3º semestre do curso de Projeto de Software e Segurança da Informação da Universidade de Mogi das Cruzes. A SoftPaper é uma papelaria online inovadora focada na venda de cadernos personalizados. O sistema foi construído seguindo o padrão de arquitetura MVC (Model-View-Controller), buscando implementar Sistemas de Informação (SI) para otimizar o atendimento e a experiência de compra dos clientes. Ele foi projetado para ser um ambiente virtual dinâmico e confiável para a comercialização de produtos de papelaria, com foco na segurança das transações e na navegação intuitiva.
 
