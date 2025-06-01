@@ -39,4 +39,42 @@ CREATE TABLE usuarios (
     cep VARCHAR(20)
 );
 
+### 🏠 Tela Inicial
+<div>
+  <img src="https://github.com/bibs-co/papelaria-online/blob/main/img/Inicio.gif" width="500px"/>
+</div>
+
+### 📝 Tela de Cadastro
+<div>
+  <img src="https://github.com/bibs-co/papelaria-online/blob/main/img/Cadastro.png" width="500px"/>
+</div>
+
+### 🔐 Tela de Login
+<div>
+  <img src="https://github.com/bibs-co/papelaria-online/blob/main/img/Login.png" width="500px"/>
+</div>
+
+### 🛒 Carrinho
+<div>
+  <img src="https://github.com/bibs-co/papelaria-online/blob/main/img/Carrinho.gif" width="500px"/>
+</div>
+
+### ✅ Tela de Compra Finalizada
+<div>
+  <img src="https://github.com/bibs-co/papelaria-online/blob/main/img/CompraFinalizada.gif" width="500px"/>
+</div>
+
+### 🗎 Documentação 
+A documentação da API está como <a href="https://github.com/bibs-co/papelaria-online/blob/main/Documenta%C3%A7%C3%A3o.pdf">Documentação.pdf .
+
+### 🛠 Tecnologias e Ferramentas Utilizadas:
+
+<div style="display: inline_block"><br>
+  <img align="center" alt="Java" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
+  <img align="center" alt="HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg">
+  <img align="center" alt="JS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+  <img align="center" alt="CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg">
+  <img align="center" alt="MySQL" height="50" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />          
+</div>
+
 
